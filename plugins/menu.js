@@ -5,11 +5,11 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let menu = `
 ╭══〘 ✯✯✯✯✯✯✯✯ 〙═╮
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-║➤ *✨𝗛ola, ${taguser} :D*
+║➤ *✨Salut, ${taguser} :D*
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ╰══╡✯✯✯✯✯✯✯✯╞══╯
 ┏━━━━━━━━━━━━━┓
-┃ *< COMANDOS >*
+┃ *< commandes >*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ┣ ඬ⃟💫 _a_
 ┣ ඬ⃟💫 _${usedPrefix}cat_
@@ -64,7 +64,7 @@ let menu = `
 ┣ ඬ⃟💫 _${usedPrefix}reverse *[nota de voz]*_
 ┣ ඬ⃟💫 _${usedPrefix}smooth *[nota de voz]*_
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-┃ *< OWNER >*
+┃ *< Propriétaire >*
 ┃≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ┣ ඬ⃟💫 _${usedPrefix}update_
 ┣ ඬ⃟💫 _${usedPrefix}banchat_
@@ -72,9 +72,9 @@ let menu = `
 ┗━━━━━━━━━━━━━┛
 `.trim()
 let buttons = [
-{ buttonId: '#owner', buttonText: { displayText: '💫 𝐎𝐖𝐍𝐄𝐑 💫' }, type: 1 },
-{ buttonId: '#runtime', buttonText: { displayText: '⏰ 𝐑𝐔𝐍𝐓𝐈𝐌𝐄 ⏰' }, type: 1 },
-{ buttonId: '#infohost', buttonText: { displayText: '👑 𝐈𝐍𝐅𝐎𝐇𝐎𝐒𝐓 👑' }, type: 1 }]
+{ buttonId: '#owner', buttonText: { displayText: '💫 CRÉATEUR 💫' }, type: 1 },
+{ buttonId: '#cat', buttonText: { displayText: '⏰ Chat ⏰' }, type: 1 },
+{ buttonId: '#gimage ramdom', buttonText: { displayText: '👑 Aléatoire 👑' }, type: 1 }]
 let buttonMessage = {
 image: fs.readFileSync('./Menu2.jpg'),
 caption: menu.trim(),
@@ -88,15 +88,15 @@ externalAdReply: {
 showAdAttribution: true,
 mediaType: 'VIDEO',
 mediaUrl: null,
-title: '👑 𝐀𝐜𝐢𝐝𝐢𝐜𝐍𝐨𝐝𝐞𝐬 𝐇𝐨𝐬𝐭 👑',
+title: '👑 Grupo del Bot 👑',
 body: null,
 thumbnail: fs.readFileSync('./src/logo.png'),
-sourceUrl: `https://chat.whatsapp.com/F0fU7LSlBBcBm6ny5fVSuT`
+sourceUrl: ``
 }}}
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 handler.help = ['menu', 'help', '?']
 handler.tags = ['general']
-handler.command = /^(menucompleto|comandos|allmenu|info|speed|estado|menú|menu|help|\?)$/i
+handler.command = /^(menucompleto|comandos|allmenu|info|menu|commandes|menú|menu|help|\?)$/i
 handler.fail = null
 module.exports = handler
