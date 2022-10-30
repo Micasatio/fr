@@ -13,31 +13,31 @@ let vid = results.all.find(video => video.seconds < 3600)
 let { dl_link, thumb, title, filesize, filesizeF } = await (/2$/.test(command) ? ytv : yta)(vid.url, 'id4')
 let shortUrl = await (await fetch(`https://tinyurl.com/api-create.php?url=${dl_link}`)).text()
 conn.sendFile(m.chat, thumb, 'error.jpg', `
-📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}
-*📁 𝙿𝙴𝚂𝙾:* ${filesizeF}
-*🔗 𝚄𝚁𝙻:* ${vid.url}
-*📥 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰𝚁:* ${shortUrl}
+📌 *Qualification:* ${title}
+*📁 Lester:* ${filesizeF}
+*🔗 URL:* ${vid.url}
+*📥 Décharge :* ${shortUrl}
 `.trim(), m, false, { 
 contextInfo: { externalAdReply: {
 title: 'ʀᴇᴘʀᴏᴅᴜᴄᴛᴏʀ ᴅᴇ ʏᴏᴜᴛᴜʙᴇ',
-body: '©𝑆𝑖𝑚𝑝𝑙𝑒𝐵𝑜𝑡', 
+body: 'Salut ', 
 sourceUrl: `https://github.com/BrunoSobrino/SimpleBot`, 
 thumbnail: fs.readFileSync('./Menu2.jpg') }}})
 conn.sendFile(m.chat, dl_link, title + '.mp' + (3 + /2$/.test(command)), `
-*📌 𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}
-*📁 𝙿𝙴𝚂𝙾:* ${filesizeF}
+*📌 Qualification:* ${title}
+*📁 Lester:* ${filesizeF}
 *🔗 𝚄𝚁𝙻:* ${vid.url}
 `.trim(), m)
 } catch {
 try {
 
-m.reply(`*[❗] 𝙻𝙰 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰 𝙳𝙴𝙻 𝙰𝚄𝙳𝙸𝙾 / 𝚅𝙸𝙳𝙴𝙾 𝙵𝙰𝙻𝙻𝙾, 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝙽𝙳𝙾 𝙲𝙾𝙽 𝙾𝚃𝚁𝙾 𝚂𝙴𝚁𝚅𝙸𝙳𝙾𝚁 𝙳𝙴 𝙰𝚄𝙳𝙸𝙾...*\n\n*—◉ 𝚁𝙴𝙲𝚄𝙴𝚁𝙳𝙰 𝚀𝚄𝙴 𝙿𝚄𝙴𝙳𝙴 𝚄𝚂𝙰𝚁 𝙻𝙰 𝙾𝙿𝙲𝙸𝙾𝙽 𝟹 𝙳𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰 𝚄𝚂𝙰𝙽𝙳𝙾 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾*\n◉ _#play3 *[texto]*_`)  
+m.reply(`*[❗] le téléchargement audio / 𝚅𝙸𝙳𝙴𝙾 Manqué , 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝙽𝙳𝙾 𝙲𝙾𝙽 𝙾𝚃𝚁𝙾 𝚂𝙴𝚁𝚅𝙸𝙳𝙾𝚁 𝙳𝙴 𝙰𝚄𝙳𝙸𝙾...*\n\n*—◉ 𝚁𝙴𝙲𝚄𝙴𝚁𝙳𝙰 𝚀𝚄𝙴 𝙿𝚄𝙴𝙳𝙴 𝚄𝚂𝙰𝚁 𝙻𝙰 𝙾𝙿𝙲𝙸𝙾𝙽 𝟹 𝙳𝙴 𝙳𝙴𝚂𝙲𝙰𝚁𝙶𝙰 𝚄𝚂𝙰𝙽𝙳𝙾 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾*\n◉ _#play3 *[texto]*_`)  
 let res = await (await fetch(`https://api.lolhuman.xyz/api/ytplay2?apikey=${lolkeysapi}&query=${text}`))    
 let json = await res.json()
 conn.sendMessage(m.chat, { audio: { url: json.result.audio }, mimetype: 'audio/mp4', fileName: json.result.title + `.mp3`}, {quoted: m})
 
 } catch  {
-m.reply('*[❗] 𝙴𝚁𝚁𝙾𝚁*')
+m.reply('*[❗] Erreur*')
 }}}
 handler.help = ['play', 'play2'].map(v => v + ' <pencarian>')
 handler.tags = ['general']
