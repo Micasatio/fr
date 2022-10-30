@@ -3,7 +3,7 @@ let handler = async (m, {command, conn}) => {
 let res = await axios(pickRandom(meme))
 let json = res.data
 let url = json.url
-conn.sendButtonImg(m.chat, url, `_${command}_`.trim(), author, '🔄 𝚂𝙸𝙶𝚄𝙸𝙴𝙽𝚃𝙴 🔄', `/${command}`, m)}
+conn.sendButtonImg(m.chat, url, `_${command}_`.trim(), author, '🔄 Suivant 🔄', `/${command}`, m)}
 handler.command = /^(meme)$/i
 module.exports = handler
 
